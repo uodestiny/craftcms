@@ -1,0 +1,9 @@
+format: null
+handle: bannerSize
+height: 450
+interlace: none
+mode: crop
+name: 'Banner Size'
+position: center-center
+quality: null
+width: 1140

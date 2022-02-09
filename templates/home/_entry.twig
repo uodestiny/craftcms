@@ -1,0 +1,22 @@
+{% extends "/layouts/main" %}
+
+{% block content %}
+    
+    <div class="contentText">
+        {{ entry.bodyText }}
+        
+        {% set blocks = entry.homeCtas.all() %}
+        {% if blocks|length %}
+          <ul class="list-unstyled homeCTAs">
+            {% for block in blocks %}
+                <li>
+                    <a href="{{ block.homeLink }}">
+                        {{ block.homeLinkName }}
+                    </a>
+                </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+    </div>
+
+{% endblock %}

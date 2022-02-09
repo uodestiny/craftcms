@@ -1,0 +1,24 @@
+columnSuffix: dmhcqsnn
+contentColumnType: string
+fieldGroup: 683b7d15-c3e1-473c-b0ba-00c238c1a16a # Common
+handle: showInMainNavigation
+instructions: ''
+name: 'Show In Main Navigation'
+searchable: false
+settings:
+  multi: true
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - 'Show In Main Navigation'
+        -
+          - value
+          - '1'
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Checkboxes

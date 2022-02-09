@@ -1,0 +1,5 @@
+{% if entry.mainImage is not empty %}
+    <div class="mainBanner">
+        <img src="/uploads/{{ entry.mainImage[0].filename }}" alt="{{ entry.title }}" />
+    </div>
+{% endif %}

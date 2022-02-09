@@ -1,0 +1,124 @@
+dateModified: 1644443171
+email:
+  fromEmail: aaronspence@me.com
+  fromName: 'Good Beers Inc'
+  replyToEmail: aaronspence@me.com
+  template: null
+  transportSettings:
+    apiKey: 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
+  transportType: putyourlightson\sendgrid\mail\SendgridAdapter
+meta:
+  __names__:
+    0f39493c-51f1-4095-b273-87eeb9ef089b: Stockists # Stockists
+    1be73d74-5277-4dc1-9569-84f2aebaa410: Stockist # Stockist
+    1cf97504-5ced-4e1e-94c2-74f6bd2b9658: 'Good Beers Inc' # Good Beers Inc
+    1efd096d-62cb-420e-af40-5bddf2e37d3b: Product # Product
+    1f6e67b6-509e-492f-aeae-7bf0798a8447: 'Contact Us' # Contact Us
+    1f210362-85a9-4ba7-831c-bae7252dd65c: Product # Product
+    3a4a57e3-dd13-4ed3-9bd4-82e0a60737c0: 'Contact Us' # Contact Us
+    3ec2ac73-d770-4515-be45-9bd5dc87af7e: 'Address Line 2' # Address Line 2
+    4c74b872-7e87-4bca-8bfc-814c45247ee6: 'Terms & Conditions' # Terms & Conditions
+    5cbe6343-8320-4b1d-a27a-1159fda99202: 'Show In Main Navigation' # Show In Main Navigation
+    5e3f6df0-392b-45c2-9088-58547874aba3: 'Home Link Name' # Home Link Name
+    6b1719a0-da57-4b67-835f-da5a904cdb51: 'Address Line 1' # Address Line 1
+    6c7da512-c7bb-4130-b1b8-2eedcac062d3: Stockists # Stockists
+    6df5c000-efc5-4a29-a77e-c621461017e7: Sizes # Sizes
+    7faa0a9d-b60d-4475-a02b-f005357155ca: 'Home Links' # Home Links
+    8b8e55ee-c99e-4230-b04f-a7e5d9cfe000: Latitude # Latitude
+    8bd33da8-6e78-4e31-a6fd-a5c908a923f0: 'Main Image' # Main Image
+    8e415e47-3e4a-45b0-b0f8-6aef6311c74c: Map # Map
+    9a9d025d-9709-4ef3-ab93-245ad221487c: 'Tasting Notes' # Tasting Notes
+    57a48b92-00ac-4a12-b9d6-492526b3ed5f: Home # Home
+    59c85d99-aadc-4d2a-a6b7-bbcc5562a3a0: Default # Default
+    256c67e2-3bae-4daf-ba9c-b7bd58345538: 'Products Stocked' # Products Stocked
+    282eecf3-9a9a-44cf-999e-29e3ffc3249f: Sizes # Sizes
+    305d519a-5ada-4ae3-af49-990d7eb2216b: Size # Size
+    322b7d45-d13d-4f79-b863-b9ee3fadd4ae: 'Good Beers Inc' # Good Beers Inc
+    683b7d15-c3e1-473c-b0ba-00c238c1a16a: Common # Common
+    842bf58f-1be9-496d-aa9f-b9b428ea9072: ABV # ABV
+    886e751b-b153-4140-8180-802bc0953854: Longitude # Longitude
+    4653ac3f-762f-48f7-b69f-08fd3f92e425: 'Our Products' # Our Products
+    50886d02-ed17-4796-864f-d2cf4fff2ee0: Stockist # Stockist
+    353320de-abbf-4c7f-b30a-69d0f5a47e83: 'Address Line 4' # Address Line 4
+    23010389-20de-4948-bc23-e2abb512f673: Pairings # Pairings
+    67930154-5910-4a35-8a81-6f678e6a54e2: Image # Image
+    a5c8377e-c207-46a3-827a-a3246481f33e: 'Home Link' # Home Link
+    a50ada06-6578-4e87-ad72-b1009fb246a5: Default # Default
+    a68146ac-cef1-4d2e-9357-50816ddd9f20: 'Address Line 3' # Address Line 3
+    ad0e9212-0812-42db-a8c1-fcc684aa5682: Uploads # Uploads
+    ad41fcfb-20c2-4f26-87fc-dc0d400640ef: 'Brand Colour' # Brand Colour
+    addc0acf-89ac-4abd-b221-3fcf3b0cbba3: 'Banner Size' # Banner Size
+    be518519-84f1-484b-85d3-c9ad70561a68: 'Home CTAs' # Home CTAs
+    c15f2b5d-3513-4867-9dcd-f39c056450a6: 'Our Products' # Our Products
+    cbe61cd5-5d71-46e2-b691-bce744e4faf5: Home # Home
+    cc44b4ec-99ad-4fc0-8cca-691e979548ba: 'Terms & Conditions' # Terms & Conditions
+    cecfd8c2-a650-492a-b290-f4f9d4879bd0: 'Body Text' # Body Text
+    cf214938-22f3-489d-88ae-6c46cc9196cb: 'About us' # About us
+    d6df6b6c-5ce2-4c0e-8c2f-bed08e320b32: 'About us' # About us
+    d324c583-0e6b-4fb3-ad77-89dedbc1442d: Postcode # Postcode
+    d486f76b-a4cb-4ddc-904e-4ef331ecc6b0: Home # Home
+plugins:
+  bootstrap:
+    edition: standard
+    enabled: true
+    schemaVersion: 0.0.0
+    settings:
+      includeJquery: '1'
+      includePopper: '1'
+      production: production
+      useCdn: '1'
+      useEverywhere: ''
+  contact-form:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+    settings:
+      allowAttachments: ''
+      prependSender: 'On behalf of'
+      prependSubject: 'New message from Good Beers Inc'
+      successFlashMessage: 'Your message has been sent.'
+      toEmail: aaronspence@me.com
+  feed-me:
+    edition: standard
+    enabled: true
+    schemaVersion: 4.4.0
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+  sendgrid:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  simplemap:
+    edition: lite
+    enabled: true
+    schemaVersion: 3.4.2
+    settings:
+      apiKey: null
+      browserApiKey: null
+      disablePopulateMissingFieldData: false
+      geoLocationAutoRedirect: false
+      geoLocationCacheDuration: 5094000
+      geoLocationService: none
+      geoLocationToken: ''
+      geoService: google
+      geoToken: AIzaSyAmamAhusP4YFwekda63OLG5V07V-AV7RQ
+      mapTiles: carto.rastertiles/voyager
+      mapToken: ''
+      serverApiKey: null
+      unrestrictedApiKey: null
+      w3wEnabled: ''
+      w3wToken: ''
+system:
+  edition: solo
+  live: true
+  name: 'Good Beers Inc'
+  schemaVersion: 3.7.8
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true

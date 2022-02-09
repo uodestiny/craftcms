@@ -1,0 +1,124 @@
+columnSuffix: fftzfkut
+contentColumnType: string
+fieldGroup: 1be73d74-5277-4dc1-9569-84f2aebaa410 # Stockist
+handle: productsStocked
+instructions: ''
+name: 'Products Stocked'
+searchable: false
+settings:
+  multi: true
+  optgroups: true
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - 'Staunton Stout'
+        -
+          - value
+          - stauntonStout
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Bishop’s Demise'
+        -
+          - value
+          - bishopsDemise
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Murdoch Pale'
+        -
+          - value
+          - murdochPale
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'The old Inn Road'
+        -
+          - value
+          - theOldInnRoad
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Frangipane
+        -
+          - value
+          - frangipane
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Rat pack'
+        -
+          - value
+          - ratPack
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Haunting Brew'
+        -
+          - value
+          - hauntingBrew
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Irked Desert Bitter'
+        -
+          - value
+          - irkedDesertBitter
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Antelope''s Eyesight'
+        -
+          - value
+          - antelopesEyesight
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Reminiscent Nightcap Belgian'
+        -
+          - value
+          - reminiscentNightcapBelgian
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\MultiSelect

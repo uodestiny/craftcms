@@ -1,0 +1,19 @@
+columnSuffix: dngaiisu
+contentColumnType: text
+fieldGroup: 1be73d74-5277-4dc1-9569-84f2aebaa410 # Stockist
+handle: longitude
+instructions: ''
+name: Longitude
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

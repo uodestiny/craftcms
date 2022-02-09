@@ -1,0 +1,32 @@
+{% extends "/layouts/main" %}
+
+{% block content %}
+    
+    <div class="contentText">
+        
+        <h1>{{ entry.title }}</h1>
+        
+        {{ entry.bodyText }}
+        
+        <ul class="list-unstyled products">
+            {% for entry in craft.entries().section('ourProducts').order('id') %}
+                <li>
+                    <span style="background:{{ entry.brandColour }}"></span>
+                    <div class="inner">
+                        <a href="/product/{{ entry.title|kebab }}">
+                            <img src="/uploads/{{ entry.image[0].filename }}" alt="{{ entry.title }}" />
+                        </a>
+                    
+                        <a href="/product/{{ entry.title|kebab }}">
+                            <h3>{{ entry.title }}</h3>
+                        </a>
+                        
+                        {{ entry.abv }}% ABV.
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    
+    </div>
+
+{% endblock %}

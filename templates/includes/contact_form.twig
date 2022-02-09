@@ -1,0 +1,70 @@
+<div class="contactForm">
+    {% macro errorList(errors) %}
+        {% if errors %}
+            {{ ul(errors, {class: 'list-unstyled alert alert-danger'}) }}
+        {% endif %}
+    {% endmacro %}
+    
+    {% set message = message ?? null %}
+    
+    <form method="post" action="" accept-charset="UTF-8">
+        {{ csrfInput() }}
+        {{ actionInput('contact-form/send') }}
+        
+        {% if craft.app.session.hasFlash('notice') %}
+            <p class="alert alert-success">{{ craft.app.session.getFlash('notice') }}</p>
+        {% else %}
+        
+            {% if craft.app.session.hasFlash('error') %}
+                <p class="alert alert-danger">{{ craft.app.session.getFlash('error') }}</p>
+            {% endif %}
+        
+            <div class="form-group">
+                <label for="from-name">Your Full Name</label>
+                {{ input('text', 'fromName', message.fromName ?? '', {
+                    id: 'from-name',
+                    class: 'form-control',
+                    autocomplete: 'name',
+                }) }}
+                {{ message ? _self.errorList(message.getErrors('fromName')) }}
+            </div>
+        
+            <div class="form-group">
+                <label for="from-email">Your Email Address</label>
+                {{ input('email', 'fromEmail', message.fromEmail ?? '', {
+                    id: 'from-email',
+                    class: 'form-control',
+                    autocomplete: 'email',
+                }) }}
+                {{ message ? _self.errorList(message.getErrors('fromEmail')) }}
+            </div>
+        
+            <div class="form-group">
+                <label for="why-contacting">What are you contacting us about?</label>
+                
+                <select name="message[why-contacting]" class="form-control">
+                    <option value="——" selected="selected">Please select...</option>
+                    <option value="Product information">Product information</option>
+                    <option value="Customer care enquiries">Customer care enquiries</option>
+                    <option value="Licensing and branding">Licensing and branding</option>
+                    <option value="General">General</option>
+                </select>
+            </div>
+        
+            <div class="form-group">
+                <label for="message">Your Message</label>
+                {{ tag('textarea', {
+                    text: message.message ?? '',
+                    id: 'message',
+                    class: 'form-control',
+                    name: 'message',
+                    rows: 10,
+                    cols: 40,
+                }) }}
+                {{ message ? _self.errorList(message.getErrors('message')) }}
+            </div>
+        
+            <button type="submit" class="btn btn-primary">Send</button>
+        {% endif %}
+    </form>
+</div>

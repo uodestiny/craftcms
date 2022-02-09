@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 57a48b92-00ac-4a12-b9d6-492526b3ed5f # Home
+handle: homeCtas
+instructions: ''
+name: 'Home CTAs'
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_homectas}}'
+  maxBlocks: '4'
+  minBlocks: '1'
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

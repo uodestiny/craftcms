@@ -1,0 +1,65 @@
+{% extends "/layouts/main" %}
+
+{% block content %}
+    
+    <div class="contentText">
+        
+        <h1>{{ entry.title }}</h1>
+        
+        <div class="row">
+            <div class="col-sm">
+            
+            <h3>Address</h3>
+            
+            {{ entry.addressLine1 }}<br>
+            {{ entry.addressLine2 }}<br>
+            {{ entry.addressLine3 }}<br>
+            {{ entry.addressLine4 }}<br>
+            
+            ({{ entry.latitude }}, {{ entry.longitude }})
+            
+            </div>
+            <div class="col-sm">
+                <h3>Stockist Products</h3>
+                <ul class="list-unstyled">
+                    {% for product in entry.productsStocked %}
+                        <li>
+                            <a href="/product/{{ product.value|kebab }}">{{ product.label }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        
+        <section class="map-section">
+          <div id="map-canvas" data-zoom="7"></div>
+        </section>
+            
+        </div>
+
+        <ul id="locations-ul" hidden>
+            {% set products_stocked = '' %}
+            
+            {% for product in entry.productsStocked %}
+        
+                {% set products_stocked = products_stocked ~ product.label|kebab ~ ',' %}
+            
+                <li data-product="{{ product.value }}" data-url="{{ entry.title|kebab }}" data-latitude="{{ entry.latitude }}" data-longitude="{{ entry.longitude }}" data-store="{{ entry.title }}" data-address1="{{ entry.addressLine1 }}" data-address2="{{ entry.addressLine2 }}" data-address3="{{ entry.addressLine3 }}" data-address4="{{ entry.addressLine4 }}" data-stockists-string="{{ products_stocked }}">{{ entry.title }}</li>
+                
+            {% endfor %}
+        </ul>
+    
+    </div>
+
+{% endblock %}
+
+{% block footer_assets %}
+
+        {% do view.registerJsFile('https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAmamAhusP4YFwekda63OLG5V07V-AV7RQ', {
+            depends: ['doublesecretagency\\bootstrap\\web\\assets\\BootstrapAssets']
+        }) %}
+
+        {% do view.registerJsFile('/js/stockists.js', {
+            depends: ['doublesecretagency\\bootstrap\\web\\assets\\BootstrapAssets']
+        }) %}
+{% endblock %}

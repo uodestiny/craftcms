@@ -1,0 +1,15 @@
+defaultPlacement: end
+enableVersioning: true
+handle: ourProducts
+name: Product
+propagationMethod: all
+siteSettings:
+  1cf97504-5ced-4e1e-94c2-74f6bd2b9658: # Good Beers Inc
+    enabledByDefault: true
+    hasUrls: true
+    template: product/_entry
+    uriFormat: 'product/{slug}'
+structure:
+  maxLevels: null
+  uid: c6b4a1ce-f845-46f2-a0c5-fb779f381e39
+type: structure

@@ -1,0 +1,43 @@
+{% extends "/layouts/main" %}
+
+{% block content %}
+    
+    <div class="contentText">
+        
+        <div class="fullProduct">
+            <div class="productImage">
+                <img src="/uploads/{{ entry.image[0].filename }}" alt="{{ entry.title }}" />
+            </div>
+            
+            <div class="productDetails">
+                <div class="productName">
+                    <h1>{{ entry.title }}</h1>
+                    
+                    <h3>Tasting Notes</h3>
+                    {{ entry.tastingNotes }}
+                    
+                    <h3>Pair With:</h3>
+                    {{ entry.pairings }}
+                    
+                    <a href="/stockists" class="btn btn-primary">Find a stockist</a>
+                </div>
+                <div class="productAbv">
+                    <h3>ABV</h3>
+                    <p>{{ entry.abv }}%</p>
+                    
+                    {% set sizes = entry.sizes.all() %}
+                    {% if sizes|length %}
+                        <h3>Sizes Available</h3>
+                        {% for size in sizes %}
+                            <p class="size">{{ size.size }}</p>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+            
+            <span style="background:{{ entry.brandColour }}"></span>
+        </div>
+    
+    </div>
+
+{% endblock %}

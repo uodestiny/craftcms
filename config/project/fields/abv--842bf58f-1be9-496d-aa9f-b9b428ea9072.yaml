@@ -1,0 +1,19 @@
+columnSuffix: pbnurxno
+contentColumnType: text
+fieldGroup: 1f210362-85a9-4ba7-831c-bae7252dd65c # Product
+handle: abv
+instructions: ''
+name: ABV
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

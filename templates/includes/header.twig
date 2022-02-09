@@ -1,0 +1,29 @@
+<header>
+    <div class="container">
+        
+        <label for="mobileMenu" hidden>Mobile Menu</label>
+        <input type="checkbox" id="mobileMenu" />
+        
+        <div class="mobileMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        
+        <a href="/" class="logo">
+            <img src="/images/logo.png" alt="{{ siteName }}" />
+        </a>
+        
+        <nav>
+            <ul class="list-unstyled">
+                {% for entry in craft.entries().showInMainNavigation('1').order('id') %}
+                    <li>
+                        <a href="/{{ entry.title|kebab }}">
+                            {{ entry.title }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </div>
+</header>

@@ -1,0 +1,15 @@
+{% extends "/layouts/main" %}
+
+{% block content %}
+    
+    <div class="contentText">
+        
+        <h1>{{ entry.title }}</h1>
+        
+        {{ entry.bodyText }}
+        
+        {% include '/includes/contact_form.twig' %}
+        
+    </div>
+
+{% endblock %}

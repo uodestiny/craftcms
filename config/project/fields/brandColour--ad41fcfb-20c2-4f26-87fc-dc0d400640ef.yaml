@@ -1,0 +1,12 @@
+columnSuffix: zjqgrmev
+contentColumnType: string(7)
+fieldGroup: 1f210362-85a9-4ba7-831c-bae7252dd65c # Product
+handle: brandColour
+instructions: ''
+name: 'Brand Colour'
+searchable: false
+settings:
+  defaultColor: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Color

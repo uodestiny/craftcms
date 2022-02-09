@@ -1,0 +1,80 @@
+{% extends "/layouts/main" %}
+
+{% block content %}
+    
+    <div class="contentText">
+        
+        <h1>{{ entry.title }}</h1>
+        
+        {{ entry.bodyText }}
+        
+        <section class="map-section">
+          <div id="map-canvas" data-zoom="0"></div>
+        </section>
+        
+        <div class="mapFilter">
+            
+            <h4>Filter Stockists</h4>
+            <div class="row">
+            
+                <div class="form-group col-sm">
+                    <label for="message">By address</label>
+                    <input placeholder="Enter address" id="location" class="form-control" type="text">
+                </div>
+                
+                <div class="form-group col-sm">
+                    <label for="message">By name</label>
+                    <input placeholder="Enter stockist name" id="stockist_name" class="form-control" type="text">
+                </div>
+                
+                
+                <div class="form-group col-sm">
+                    <label for="message">By products</label>
+                    
+                    <select id="state-select" class="form-control">
+                        <option value="">Select product</option>
+                        <option value="stauntonStout">Staunton Stout</option>
+                        <option value="bishopsDemise">Bishop's Demise</option>
+                        <option value="murdochPale">Murdoch Pale</option>
+                        <option value="theOldInnRoad">The Old Inn Road</option>
+                        <option value="frangipane">Frangipane</option>
+                        <option value="ratPack">Rat Pack</option>
+                        <option value="hauntingBrew">Haunting Brew</option>
+                        <option value="irkedDesertBitter">Irked Desert Bitter</option>
+                        <option value="antelopesEyesight">Antelope's Eyesight</option>
+                        <option value="reminiscentNightcapBelgian">Reminiscent Nightcap Belgian</option>
+                    </select>
+                </div>
+            
+            </div>
+            
+        </div>
+
+        <ul id="locations-ul" hidden>
+            {% for entry in craft.entries().section('stockist') %}
+            
+            {% set products_stocked = '' %}
+            
+            {% for product in entry.productsStocked %}
+            
+                {% set products_stocked = products_stocked ~ product.label|kebab ~ ',' %}
+            
+                    <li data-product="{{ product.value }}" data-url="{{ entry.title|kebab }}" data-latitude="{{ entry.latitude }}" data-longitude="{{ entry.longitude }}" data-store="{{ entry.title }}" data-address1="{{ entry.addressLine1 }}" data-address2="{{ entry.addressLine2 }}" data-address3="{{ entry.addressLine3 }}" data-address4="{{ entry.addressLine4 }}" data-stockists-string="{{ products_stocked }}">{{ entry.title }}</li>
+                
+                {% endfor %}
+            {% endfor %}
+        </ul>
+    </div>
+
+{% endblock %}
+
+{% block footer_assets %}
+
+        {% do view.registerJsFile('https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAmamAhusP4YFwekda63OLG5V07V-AV7RQ', {
+            depends: ['doublesecretagency\\bootstrap\\web\\assets\\BootstrapAssets']
+        }) %}
+
+        {% do view.registerJsFile('/js/stockists.js', {
+            depends: ['doublesecretagency\\bootstrap\\web\\assets\\BootstrapAssets']
+        }) %}
+{% endblock %}
